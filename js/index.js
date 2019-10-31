@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("monster-form")
   form.addEventListener("submit", submittedMonster)
 
-  // add left button listner
+  // add left arrow button listner
   document.querySelector("#back").addEventListener("click", pageDown);
+  // add right arrow button listner
   document.querySelector("#forward").addEventListener("click", pageUp);
 
   // loads monsters

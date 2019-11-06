@@ -76,6 +76,7 @@ function submittedMonster(event) {
   .then(data => addMonster(data))
 }
 
+
 function pageDown() {
   if (page <= 1) {
     alert("You are on the first page.")
@@ -83,6 +84,12 @@ function pageDown() {
   page--;
   eachPage(page);}
 }
+
+var monsterArray;
+fetch(apiurl)
+.then(response => response.json())
+.then(data => {
+  monsterArray = Array.prototype.slice.call(data)})
 
 function pageUp() {
   const pagenumTotal = Math.floor(monsterArray.length/50) + 1
